@@ -1,0 +1,44 @@
+{
+  "name": "@automation/core",
+  "version": "1.0.0",
+  "description": "Pacote compartilhado para automações",
+  "private": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "repository": {
+
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "automation",
+    "puppeteer",
+    "handless",
+    "anonymous"
+  ],
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc --project tsconfig.json",
+    "dev": "ts-node --project tsconfig.json src/index.ts",
+    "watch": "tsc --project tsconfig.json --watch"
+  },
+  "author": "Miguel Siqueira Reis",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^24.11.2",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "puppeteer-extra-plugin-user-preferences": "^2.4.1",
+    "user-agents": "^1.1.590"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

@@ -1,0 +1,9 @@
+/src
+/dist
+/node_modules
+
+.env
+.DS_Store
+
+tsconfig.json
+tsconfig.tsbuildinfo
