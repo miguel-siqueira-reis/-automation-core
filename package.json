@@ -1,5 +1,5 @@
 {
-  "name": "@automation/core",
+  "name": "@null_xx/automation-core",
   "version": "1.0.0",
   "description": "Pacote compartilhado para automações",
   "private": false,
@@ -9,9 +9,6 @@
     "type": "git",
     "url": "git+https://github.com/miguel-siqueira-reis/-automation-core.git"
   },
-  "files": [
-    "dist/**/*"
-  ],
   "keywords": [
     "automation",
     "puppeteer",

@@ -1,10 +1,9 @@
-
 # 📚 Puppeteer Automation Helper - Documentação
 
 ## 📦 Instalação
 
 ```bash
-npm install @automation/core
+npm install @null_xx/automation-core
 ```
 
 ---
@@ -23,15 +22,17 @@ Classe utilitária para automação com Puppeteer que oferece:
 
 ## 🧭 Métodos de Navegação
 
-| Método | Descrição |
-|--------|-----------|
-| `open()` | Inicia o navegador com configurações padrão |
-| `newPage()` | Abre uma nova aba no navegador |
-| `goto(url, options)` | Navega para a URL desejada |
-| `close()` | Encerra o navegador completamente |
-| `closeVoidPages()` | Fecha abas em branco ou sem conteúdo |
+
+| Método              | Descrição                                    |
+| -------------------- | ---------------------------------------------- |
+| `open()`             | Inicia o navegador com configurações padrão |
+| `newPage()`          | Abre uma nova aba no navegador                 |
+| `goto(url, options)` | Navega para a URL desejada                     |
+| `close()`            | Encerra o navegador completamente              |
+| `closeVoidPages()`   | Fecha abas em branco ou sem conteúdo          |
 
 **Exemplo:**
+
 ```javascript
 await bot.open();
 await bot.newPage();
@@ -43,14 +44,16 @@ await bot.closeVoidPages();
 
 ## ✋ Métodos de Interação
 
-| Método | Descrição |
-|--------|-----------|
-| `type(selector, value)` | Digita em um campo de input |
-| `click(selector, verifyDisabled?)` | Clica em um elemento (espera estar habilitado, se `verifyDisabled` = true) |
-| `select(selector, option)` | Seleciona opção em `<select>` padrão |
-| `customSelect(selectorSelect, itemSelect, itemValue, options?)` | Seleciona opções em dropdowns customizados |
+
+| Método                                                         | Descrição                                                               |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `type(selector, value)`                                         | Digita em um campo de input                                               |
+| `click(selector, verifyDisabled?)`                              | Clica em um elemento (espera estar habilitado, se`verifyDisabled` = true) |
+| `select(selector, option)`                                      | Seleciona opção em`<select>` padrão                                    |
+| `customSelect(selectorSelect, itemSelect, itemValue, options?)` | Seleciona opções em dropdowns customizados                              |
 
 **Exemplo:**
+
 ```javascript
 await bot.type('#usuario', 'admin');
 await bot.click('#entrar', true);
@@ -62,13 +65,15 @@ await bot.customSelect('.dropdown', '.opcao', 'Opção 1');
 
 ## 🔎 Métodos de Busca
 
-| Método | Descrição |
-|--------|-----------|
-| `get(selector, options?)` | Retorna elemento(s) com base no seletor |
-| `getValue(selector, options?)` | Retorna texto ou valor de um elemento |
+
+| Método                                  | Descrição                                                       |
+| ---------------------------------------- | ----------------------------------------------------------------- |
+| `get(selector, options?)`                | Retorna elemento(s) com base no seletor                           |
+| `getValue(selector, options?)`           | Retorna texto ou valor de um elemento                             |
 | `waitForElement(selector, text?, time?)` | Aguarda a presença de um elemento com (ou sem) texto específico |
 
 **Exemplo:**
+
 ```javascript
 const produto = await bot.get('.produto', { text: 'Tênis' });
 const preco = await bot.getValue('.preco');
@@ -79,13 +84,15 @@ await bot.waitForElement('.sucesso', 'Concluído');
 
 ## ⚙️ Métodos de Configuração
 
-| Método | Descrição |
-|--------|-----------|
-| `configDownload(path)` | Define o diretório de download |
-| `setNewAgent()` | Altera o User-Agent da página |
-| `time(ms)` | Aplica `multiplierTime` sobre valores de tempo |
+
+| Método                | Descrição                                   |
+| ---------------------- | --------------------------------------------- |
+| `configDownload(path)` | Define o diretório de download               |
+| `setNewAgent()`        | Altera o User-Agent da página                |
+| `time(ms)`             | Aplica`multiplierTime` sobre valores de tempo |
 
 **Exemplo:**
+
 ```javascript
 bot.multiplierTime = 2; // Dobra todos os tempos
 const espera = bot.time(1000); // 2000ms
@@ -95,11 +102,13 @@ const espera = bot.time(1000); // 2000ms
 
 ## ⏳ Métodos de Tempo
 
-| Método | Descrição |
-|--------|-----------|
+
+| Método     | Descrição                            |
+| ----------- | -------------------------------------- |
 | `sleep(ms)` | Pausa a execução por X milissegundos |
 
 **Exemplo:**
+
 ```javascript
 await bot.sleep(3000); // 3 segundos
 ```
