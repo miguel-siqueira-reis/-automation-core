@@ -6,7 +6,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "repository": {
-
+    "type": "git",
+    "url": "git+https://github.com/miguel-siqueira-reis/-automation-core.git"
   },
   "files": [
     "dist/**/*"
@@ -38,7 +39,7 @@
     "typescript": "^5.8.3"
   },
   "publishConfig": {
-    "access": "restricted",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
