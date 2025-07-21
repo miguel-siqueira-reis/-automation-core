@@ -1,6 +1,6 @@
 {
   "name": "@null_xx/automation-core",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Pacote compartilhado para automações",
   "private": false,
   "main": "./dist/index.js",

@@ -1,4 +1,4 @@
-import type { Browser, ElementHandle, GoToOptions, Page } from 'puppeteer';
+import type { Browser, ElementHandle, GoToOptions, LaunchOptions, Page } from 'puppeteer';
 import puppeteer from "puppeteer-extra";
 const UserAgent = require('user-agents');
 const AnonymizeUAPlugin = require('puppeteer-extra-plugin-anonymize-ua');
@@ -31,10 +31,11 @@ export class Automation {
   public multiplierTime: number = 1;
   public downloadPath: string = '';
 
-  async open() {
+  async open(launchOptions: LaunchOptions = {}) {
     this.browser = await puppeteer.launch({
       headless: false,
       args: ['--profile-directory=Profile 1', "--no-sandbox", '--disable-setuid-sandbox', '--disable-features=PasswordLeakDetection'],
+      ...launchOptions
     });
     await this.newPage()
   }
